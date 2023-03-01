@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html>
+
+
+    <head>
+         <meta charset="UTF-8">
+         <title>Assignment-2-Website</title>
+         
+          
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+          
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+        <style>
+          .container-fluid{
+            position: absolute;
+            left: 950px;
+            padding-bottom: 10px;
+          }
+          .box1{
+            background-color:lightblue;
+            width: auto;
+            height: auto;
+            padding:50px 20px 20px 15px;
+          }
+
+          .grid-container {
+            display: grid;
+            grid-template-columns: auto auto;
+          }
+          .grid-container-2{
+            display: grid;
+            grid-template-columns: auto auto;
+           
+
+          }
+
+           h6{
+            color: gray;
+            font-size: 20px;
+          } 
+          mark{
+            background-color: yellow;
+            color:black;
+          }
+
+          .button {
+            border: none;
+            color: white;
+            padding: 18px 45px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 26px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+          }
+
+          .button1 {
+            background-color:blue; 
+            color: white;
+            border-radius: 5px;
+            
+          }
+
+          .card-content1{
+            margin: 25px;
+            display: grid;
+            grid-template-columns: auto auto auto;
+          }
+          .box2{
+            padding-top: 80px;
+            text-align: center;
+          }
+          .bp1{
+            color: gray;
+          }
+          .bp2{
+            font-size: 40px;
+            color: rgb(36, 20, 126)
+          }
+
+          .bp3{
+            color: gray;
+          }
+
+          .bp4{
+            font-size: 40px;
+            color: rgb(36, 20, 126)
+          }
+          .bp5{
+            color:blue;
+          }
+
+          .box3{
+            background-color:lightblue;
+            width: auto;
+            height: auto;
+
+            padding:120px 20px 50px 15px;
+            display: grid;
+            grid-template-columns: auto auto;
+          }
+
+            
+           .topnav a {
+              float: left;
+              display: block;
+              color: black;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+              font-size: 50px;
+            }
+
+
+            .topnav .search-container {
+              float: right;
+            }
+
+            .topnav input[type=text] {
+              padding: 6px;
+              margin-top: 8px;
+              font-size: 40px;
+              border: none;
+            }
+
+            .topnav .search-container button {
+              float: right;
+              padding: 6px;
+              margin-top: 8px;
+              margin-right: 16px;
+              background: darkblue;
+              font-size: 50px;
+              border: none;
+              cursor: pointer;
+            }
+
+            .topnav .search-container button:hover {
+              background: #ccc;
+            }
+
+            @media screen and (max-width: 600px) {
+              .topnav .search-container {
+                float: none;
+              }
+              .topnav a, .topnav input[type=text], .topnav .search-container button {
+                float: none;
+                display: block;
+                text-align: left;
+                width: 100%;
+                margin: 0;
+                padding: 14px;
+              }
+              .topnav input[type=text] {
+                border: 1px solid #ccc;  
+              }
+            }
+            
+
+
+            .box4{
+            padding-top: 80px;
+            text-align: center;
+            padding-bottom: 50px;
+            
+            }
+
+            .bp6{
+              color: gray;
+            }
+
+            .bp7{
+            font-size: 40px;
+            color: rgb(36, 20, 126)
+            }
+
+            .div-container-3{
+            display: grid;
+            grid-template-columns: auto auto auto;
+
+            }
+
+            .box5{
+            padding-top: 80px;
+            text-align: center;
+            padding-bottom: 50px;
+             
+            
+            }
+
+            .grid-container-4{
+              display:flex;
+              grid-template-columns: auto auto auto auto;
+
+            }
+
+            .box6{
+
+            background-color:lightblue;
+            width: auto;
+            height: auto;
+            padding:50px 20px 20px 15px;
+
+            }
+
+            .div-container-5{
+
+              display:flex;
+              grid-template-columns: auto auto;
+
+            }
+           
+            .infor{
+              text-align:center;
+              padding-top:50px;
+            }
+
+            .button2 {
+            background-color:blue; 
+            color: white;
+            border-radius: 5px;
+            
+          }
+          .chat-icon{
+            width: 80px;
+            height: 80px;
+            position: fixed;
+            top: 85%;
+            right: 90%;
+          }
+
+          .form{
+            background-color: rgb(12, 12, 93);
+            padding: 80px;
+            width: auto;
+            height: auto;
+            
+          }
+
+           input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+          }
+
+          label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+          }
+
+          input[type=submit] {
+            background-color: rgb(50, 159, 238);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+          }
+
+          input[type=submit]:hover {
+            background-color: grey;
+          }
+
+          .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+          }
+
+          .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+          }
+
+          .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+          }
+
+          
+          .row:after {
+            content: "";
+            display: table;
+            clear: both;
+          }
+
+          @media screen and (max-width: 600px) {
+            .col-25, .col-75, input[type=submit] {
+              width: 100%;
+              margin-top: 0;
+            }
+          }
+
+          .form-topic{
+            color: white;
+            text-align: center;
+          }
+
+          .form-cont{
+            color: white;
+            text-align: center;
+          }
+
+          .box7{
+            background-color: dodgerblue;
+            padding: 80px;
+            width: auto;
+            height: auto;
+            display: grid;
+            grid-template-columns: auto auto;
+            color: white;
+
+          }
+
+          .footer-content-1{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+
+          }
+
+          
+          
+          
+
+          
+        </style>
+
+    </head>
+
+    <body>
+
+      
+
+        <img src="data:image/png;base64,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" alt="Bluehost logo" height="150px">
+        <img class="chat-icon" src="https://w7.pngwing.com/pngs/273/74/png-transparent-online-chat-livechat-chat-room-baycreative-inc-google-icon-blue-text-logo.png" alt="chat icon">
+        <!-- ===============Navigation Bar 1================ -->
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" >
+            <div class="container-fluid">
+
+                
+              <a class="navbar-brand" href="#">Pricing & Plans</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      USD
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">GPB</a></li>
+                      <li><a class="dropdown-item" href="#">EUR</a></li>
+                      <li><a class="dropdown-item" href="#">CAD</a></li>
+                      <li><a class="dropdown-item" href="#">LKR</a></li>
+                      <li><a class="dropdown-item" href="#">AUS</a></li>
+                    </ul>
+                  </li>
+                  
+                </ul>
+              
+              </div>
+            </div>
+          </nav>
+        
+
+
+          <!-- ===============Navigation Bar 2 ================ -->
+
+          
+
+          <nav class="navbar navbar-expand-lg bg-body-tertiary">
+           
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">WordPress</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Hosting & Websites</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Domains</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Email</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Professional Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Developers & Designers</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Resources
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        
+
+          <!-- Box1 -->
+
+          <div class="box1">
+
+            <div class="grid-container">
+
+              <div>
+                <h6> HOSTING.  WEBSITES.  STORES.</h6><br>
+
+                <h1><mark>Up to 70% off </mark> on hosting for WordPress Websites and Stores.</h1><br><br>
+                <h6>Secure your discount before these savings end.</h6><br>
+
+                <div class="grid-container-2">
+                  <div>
+
+                  <p>Free Domain</p>
+                  <p>Free SSL</p>
+              
+                  </div>
+
+                  <div>
+                    <P>Free Domain</P>
+                    <p>Money-back Guaruntee</p>
+                  </div>
+                  
+
+                </div>
+
+                
+              </div>
+
+              <div>
+                <img src="https://media.istockphoto.com/id/1294818737/photo/confident-indian-businesswoman-working-with-project-documents-colorful-stickers.jpg?b=1&s=170667a&w=0&k=20&c=BXcUGUmisi4Mr0MGV1n6UEVQTnhsXuC8m0ljuIJiMuU=" alt="working lady image">
+              </div>
+
+              
+
+            </div>
+
+            <br><br>
+            <button class="button button1">Get Started</button>
+            <br><br>
+
+
+            <h6>Starting at $2.95/mo*</h6>
+            <p>Regularly $10.99 12/mo term</p>
+
+
+            
+          </div>
+
+          <!-- Card Content1 -->
+
+          <div class="card-content1">
+
+            <div class="card1" style="width: 18rem;">
+              <img src="https://s.w.org/style/images/about/WordPress-logotype-standard.png" class="card-img-top" alt="WordPress Image" height="100px" width="225px">
+              <div class="card-body">
+                <p class="card-text">Bluehost is one of the top recommended WordPress providers by WordPress.org</p>
+              </div>
+            </div>
+
+            <div class="card2" style="width: 18rem;">
+              <img src="https://static.wixstatic.com/media/1f2868_2fbb9937c0fc4f55824b53bad5e6edb9~mv2.png/v1/fill/w_400,h_180,al_c,lg_1,q_85,enc_auto/trustpilot-logo-4stars.png" class="card-img-top" alt="WordPress 2 Image" height="100px" width="50px">
+              
+            </div>
+
+            <div class="card3" style="width: 18rem;">
+              <img src="https://press.avast.com/hubfs/editors-choice-pcmag.png" class="card-img-top" alt="WordPress3 Image" height="100px" width="120px">
+              <div class="card-body">
+                <p class="card-text">Picked as 2021 PC Magazine Editors' Choice for Web Hosting.</p>
+              </div>
+
+            </div>
+
+
+          </div>
+
+          <!-- Box2 -->
+
+          <div class="box2">
+
+            <p class="bp1">BLUEHOST PROFESSIONAL SERVICES</p>
+
+            <p class="bp2"><strong>Let the experts build you the site of your dreams.</strong> </p>
+
+            <p class="bp3">Short on time? We're happy to create a beautiful & professional website for you. Simply get in touch with our experts for a free consultation.</p>
+
+            <p class="bp4"><strong>Call us now at 077-1615110</strong></p>
+
+            <p class="bp5"><u>Request a Call Back</u> </p>
+
+          </div>
+
+          <!-- Box3 -->
+
+          <div class="box3">
+
+            <div class="div-container">
+
+              <h6>DOMAIN NAMES</h6>
+              <h1>Every great website needs a great name.</h1>
+            </div>
+
+            <div>
+              <h6>Your domain helps people find you online and makes a first impression. Find one that represents you perfectly.</h6>
+            </div>
+
+            <div class="topnav">
+              <a class="active">
+             
+              <div class="search-container">
+                <form action="/action_page.php">
+                  <input type="text" placeholder=".com" name="search">
+                  <button type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+
+
+          </div>
+
+          <!-- Box4 -->
+
+          <div class="box4">
+
+            <p class="bp6"> ALL-IN-ONE WEBSITE PLATFORM </p>
+
+            <p class="bp7"><strong>Everything your website needs from start-up to success.</strong> </p>
+            
+              <div class="div-container-3">
+
+              <div>
+                <h3>Get Started Fast</h3>
+              <p>Name your website, select a design template and start building with the right hosting plan.</p>
+
+              </div>
+
+              <div>
+                <h3> Built For Results </h3>
+                <p> Optimize with design freedom, marketing tools, insightful analytics and scalable growth.</p>
+
+              </div>
+
+              <div>
+                <h3> Peace of Mind </h3>
+                <p> Guaranteed reliability, automated security updates, backup data protection and 24/7 support.</p>
+
+              </div>
+
+            </div>
+
+              
+          </div>
+
+          <!-- Box5 -->
+
+          <div class="box5">
+
+            <img  src="https://www.design-vibe.co.uk/wp-content/uploads/2017/06/eng-web.png" alt="man image" width="auto" height="800px">
+
+            <p>THE BEST WEB HOSTING</p>
+
+            <h1>Grab a plot of land and start building.</h1>
+
+            <p>Whether you're looking to create a website, blog or online store, Bluehost can get you started with a hosting plan tailored to your specific needs.</p>
+            
+            <div class="grid-container-4">
+
+              <div class="card1">
+                <div class="card-header">
+                  SHARED HOSTING
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">A great place to start your website or blog.</h5>
+                  <h4 class="card-text">$2.95/mo* </h4>
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+              </div>
+  
+              <div class="card2">
+                <div class="card-header">
+                  ONLINE STORES
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Sell, ship and process payments with WooCommerce hosting.</h5>
+                  <h4 class="card-text">$9.95/mo* </h4>
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+              </div>
+              
+              <div class="card3">
+                <div class="card-header">
+                  SERVER PLAN
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Sell, ship and process payments with Server hosting.</h5>
+                  <h4 class="card-text">$12.95/mo* </h4>
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+              </div>
+  
+              <div class="card3">
+                <div class="card-header">
+                  SERVER MASTER PLAN
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Sell, ship and process payments with Master Server hosting.</h5>
+                  <h4 class="card-text">$15.95/mo* </h4>
+                  <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+              </div>
+
+              
+
+
+            </div>
+
+            <h3 class=" footer of box5 " > Not sure which website hosting plan is right for you? We can help.</h3>
+            
+
+          </div>
+
+          <!-- Box6 -->
+
+          <div class="box6">
+
+
+            <div class="div-container-5">
+
+              
+                <div>
+
+                <p>WORDPRESS WEBSITES</p>
+    
+                 <h2>Build your website with WordPress</h2>
+  
+                 <h4>With Bluehost, you get all the benefits of the world's most popular site builder in a smart, secure, easy-to-use package.</h4>
+
+                </div>
+
+                <div>
+
+                  <image src="https://images04.nicepage.com/feature/531925/web-page-elements-website-design.jpg" width="800px" height="400px" >
+
+
+                </div>
+
+            </div>
+
+            <div class="infor">
+
+              <p>WEBSITE TEMPLATES</p>
+
+              <h1>Bring your website to life with a brilliant theme.</h1>
+
+              <p> Bluehost marketplace gives you access to hundreds of free and premium website themes. Pick one that suits your style and start building.</p>
+
+              <button class="button button2">Get Started</button>
+
+            </div>
+
+            
+
+          </div>
+
+          <!-- Form  -->
+
+          <div class="form">
+
+            <h1 class="form-topic">Request a callback</h1>
+              <p class="form-cont">Schedule a call today and one of our experts will be happy to help you decide which professional service is ideal for your business and budget.</p>
+
+              <div class="container">
+                <form action="/action_page.php">
+                <div class="row">
+                  <div class="col-25">
+                    <label for="fname">First Name</label>
+                  </div>
+                  <div class="col-75">
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-25">
+                    <label for="lname">Last Name</label>
+                  </div>
+                  <div class="col-75">
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-25">
+                    <label for="country">Country</label>
+                  </div>
+                  <div class="col-75">
+                    <select id="country" name="country">
+                      <option value="australia">Australia</option>
+                      <option value="canada">Canada</option>
+                      <option value="usa">USA</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-25">
+                    <label for="subject">Subject</label>
+                  </div>
+                  <div class="col-75">
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <input type="submit" value="Submit">
+                </div>
+                </form>
+              </div>
+          </div>
+
+          <!-- Box 7 -->
+
+          <div class="box7">
+
+
+            <div class="footer-content-1">
+
+              <div class="cnt1">
+
+                <h5>Products</h5>
+                <p>Shared Hosting</p>
+                <p>WordPres Hosting</p>
+                <p>WP Pro</p>
+                <p>Online Store</p>
+                <p>VPS Hosting</p>
+                <p>Dedicated Hosting</p>
+                
+
+              </div>
+
+              <div class="cnt2">
+                <h5>Programs</h5>
+                <p>WordPres</p>
+                <p>Affiliate</p>
+                <p>Marketting</p>
+                <p>WP Live</p>
+                
+              </div>
+
+              <div class="cnt3">
+                <h5>Support</h5>
+                <p>Chat</p>
+                <p>Knowledge Base</p>
+                <p>Cookie Setting</p>
+               
+                
+              </div>
+
+              <div class="cnt4">
+                <h5>Company</h5>
+                <p>About</p>
+                <p>Career</p>
+                <p>Contact</p>
+                <p>Privacy</p>
+                
+              </div>
+
+
+            </div>
+
+            <div class="footer-content-2">
+
+              <h1>bluehost</h1>
+               
+                
+                <p>© 2002-2023 bluehost inc. all rights reserved.</p>
+                
+              
+
+            
+              <br>
+              <img src="https://wavve.co/wp-content/uploads/2019/01/wavve-share-social-media.png" width="250px" height="50px">
+              
+
+            </div>
+
+          </div>
+
+          
+
+
+
+          
+
+        
+
+
+
+          
+
+
+    </body>
+
+
+</html>
